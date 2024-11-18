@@ -33,7 +33,6 @@ class Q61_Rotate_List {
         }
 
         tail.next = head;
-        head = temp;
         head = temp.next;
         temp.next = null;
         return head;
