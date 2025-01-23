@@ -3,7 +3,7 @@
 compute how much water it can trap after raining. */
 
 public class Q42_Trapping_Rain_Water {
-    //Approach 1
+    //Approach 1 (Normal arrays)
     public int trap(int[] height) {
         int ans = 0;
 
@@ -28,7 +28,7 @@ public class Q42_Trapping_Rain_Water {
         return ans;
     }
 
-    //Approach 2
+    //Approach 2 (Two pointer)
     public int trap2(int[] height) {
         int ans = 0;
         int l = 0;
