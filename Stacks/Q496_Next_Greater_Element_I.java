@@ -11,7 +11,7 @@ Return an array ans of length nums1.length such that ans[i] is the next greater 
 
 import java.util.*;
 
-class Q496_Next_Greater_Elelement_I {
+class Q496_Next_Greater_Element_I {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         // To find the next greater element for each element of the array.
         Stack<Integer> st = new Stack<>();
