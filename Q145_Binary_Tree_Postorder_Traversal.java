@@ -1,11 +1,11 @@
-// 144. Binary Tree Preorder Traversal
+// 145. Binary Tree Postorder Traversal
 /* Given the root of a binary tree,
-return the preorder traversal of its nodes' values. */
+return the postorder traversal of its nodes' values. */
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Q144_Binary_Tree_Preorder_Traversal {
+public class Q145_Binary_Tree_Postorder_Traversal {
     //Definition for a binary tree node.
     public class TreeNode {
         int val;
@@ -20,18 +20,18 @@ public class Q144_Binary_Tree_Preorder_Traversal {
         }
     }
  
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
-        preorder(root, list);
+        postorder(root, list);
         return list;
     }
 
-    public void preorder(TreeNode root, ArrayList<Integer> list){
+    public void postorder(TreeNode root, ArrayList<Integer> list){
         if (root == null){
             return;
         }
+        postorder(root.left, list);
+        postorder(root.right, list);
         list.add(root.val);
-        preorder(root.left, list);
-        preorder(root.right, list);
     }
 }
