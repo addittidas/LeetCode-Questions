@@ -4,6 +4,7 @@ return the postorder traversal of its nodes' values. */
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Q145_Binary_Tree_Postorder_Traversal {
     //Definition for a binary tree node.
@@ -37,5 +38,24 @@ public class Q145_Binary_Tree_Postorder_Traversal {
     }
 
     // Iterative Approach using 2 Stacks
-    // Iterative Approach using 1 Stack
+    public List<Integer> postorderTraversal_2stack(TreeNode root) {
+        ArrayList<Integer> list = new ArrayList<>();
+        Stack<TreeNode> st1 = new Stack<>();
+        Stack<TreeNode> st2 = new Stack<>();
+        if (root == null)
+            return list;
+        st1.push(root);
+        while(!st1.isEmpty()){
+            root = st1.pop();
+            st2.push(root);
+            if(root.left != null)
+                st1.push(root.left);
+            if(root.right != null)
+                st1.push(root.right);
+        }
+        while(!st2.isEmpty()){
+            list.add(st2.pop().val);
+        }
+        return list;
+    }
 }
