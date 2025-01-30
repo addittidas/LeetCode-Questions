@@ -19,7 +19,8 @@ public class Q145_Binary_Tree_Postorder_Traversal {
             this.right = right;
         }
     }
- 
+    
+    // Recursive Approach
     public List<Integer> postorderTraversal(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
         postorder(root, list);
@@ -34,4 +35,7 @@ public class Q145_Binary_Tree_Postorder_Traversal {
         postorder(root.right, list);
         list.add(root.val);
     }
+
+    // Iterative Approach using 2 Stacks
+    // Iterative Approach using 1 Stack
 }
