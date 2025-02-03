@@ -29,9 +29,7 @@ public class Q110_Balanced_Binary_Tree {
         boolean left = isBalanced(root.left);
         boolean right = isBalanced(root.right);
 
-        if (!left || !right)
-            return false;
-        return true;
+        return !(!left || !right);
     }
     public int findheight(TreeNode root){
         if (root == null)
@@ -40,6 +38,7 @@ public class Q110_Balanced_Binary_Tree {
     }
 
     // Optimised Solution
+    
     
 
 }
