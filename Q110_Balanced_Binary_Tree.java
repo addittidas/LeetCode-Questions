@@ -37,8 +37,8 @@ public class Q110_Balanced_Binary_Tree {
         return 1 + Math.max(findheight(root.left), findheight(root.right));
     }
 
-    // Optimised Solution
-    
+    // Optimised So
+
     
 
 }
